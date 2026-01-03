@@ -4,6 +4,56 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;  /* Breite (width) und Höhe (height) schließen padding und border mit ein */ 
 }
+@media (max-width: 600px) {
+
+  .todo-app {
+    margin: 40px 10px;
+    padding: 40px 20px;
+  }
+
+  .todo-app h2 {
+    font-size: 28px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .todo-app h2 img {
+    width: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  input {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  ul li {
+    font-size: 16px;
+    padding: 12px 8px 12px 45px;
+  }
+
+  ul li::before {
+    width: 24px;
+    height: 24px;
+    top: 14px;
+  }
+
+  ul li span {
+    font-size: 20px;
+    right: 5px;
+  }
+}
 
 .container{
     width: 100%;
