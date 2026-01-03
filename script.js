@@ -13,9 +13,10 @@ function addTask() {
     // Erstellen eines neuen Listenelements (li) und Hinzufügen des Textes aus dem Eingabefeld
     let li = document.createElement("li");
     // Setzen des Textinhalts des Listenelements auf den Wert des Eingabefelds
-    li.innerHTML = taskDate.value
-      ? " <small>📅 " + taskDate.value + "</small>"
-      : "";
+    li.innerHTML =
+      inputBox.value +
+      (taskDate.value ? " <small>📅 " + taskDate.value + "</small>" : "");
+
     // Hinzufügen des neuen Listenelements zum Listcontainer(Liste). Fügt die neue Aufgabe zur To-Do-Liste hinzu.
     listContainer.appendChild(li);
     // Leeren des Eingabefelds nach dem Hinzufügen der Aufgabe
