@@ -86,23 +86,26 @@
     text-align: center;
     margin-bottom: 25px;
 }
-.row{
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 5px;
-    color: red;
-    cursor: pointer;
-    padding-left: 25px;
-    
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #edeef0;
+  border-radius: 5px;
+  padding: 10px;
 }
-input{
+
+#input-box{
     flex: 1;
     border: none;
     outline: none;
-    background: transparent;
-    padding: 20px;
+    background: white;
+    padding: 15px;
+    font-size: 16px;
+    color:#000;
+}
+#input-box::placeholder {
+  color: #666;
 }
 button{
     border-radius: 40px;
@@ -164,4 +167,12 @@ ul li span{
 ul li span:hover{
     background: #ff594680;
     border-radius: 40%;
+}
+#task-date {
+  border: none;
+  outline: none;
+  background: white;
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
 }
