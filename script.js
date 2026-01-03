@@ -1,6 +1,7 @@
 const inputBox = document.getElementById("input-box");
 
 const listContainer = document.getElementById("list-container");
+const taskDate = document.getElementById("task-date");
 
 // Wenn Input leer → Popup, sonst → neues <li> erstellen, Text rein, zur Liste hinzufügen, Input leeren.
 
@@ -12,7 +13,9 @@ function addTask() {
     // Erstellen eines neuen Listenelements (li) und Hinzufügen des Textes aus dem Eingabefeld
     let li = document.createElement("li");
     // Setzen des Textinhalts des Listenelements auf den Wert des Eingabefelds
-    li.innerHTML = inputBox.value;
+    li.innerHTML = taskDate.value
+      ? " <small>📅 " + taskDate.value + "</small>"
+      : "";
     // Hinzufügen des neuen Listenelements zum Listcontainer(Liste). Fügt die neue Aufgabe zur To-Do-Liste hinzu.
     listContainer.appendChild(li);
     // Leeren des Eingabefelds nach dem Hinzufügen der Aufgabe
@@ -24,6 +27,8 @@ function addTask() {
     li.appendChild(span);
     // Hängt das <span> (×) an das Listen-Element (<li>) an.
     inputBox.value = "";
+    taskDate.value = "";
+    // Ruft die Funktion saveData auf, um die aktuelle Liste im lokalen Speicher zu speichern.
     saveData();
   }
 }
